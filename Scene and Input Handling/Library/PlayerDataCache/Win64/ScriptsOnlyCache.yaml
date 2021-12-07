@@ -16,8 +16,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -152,9 +150,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4632}
     - Class: 114
-      Script: {instanceID: 5356}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 5380}
+      Script: {instanceID: 17100}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -744,4 +742,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/TheGameScene.unity
-  playerPath: E:/AUCI/GDIM31/Animation/Scene and Input Handling.exe
+  playerPath: C:/Users/camer/Unity/Scene and Input Handling.exe
