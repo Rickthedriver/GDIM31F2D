@@ -6,6 +6,23 @@ using UnityEngine.SceneManagement;
 public class GameStateManager : MonoBehaviour
 {
     // Start is called before the first frame update
+    //--keegan R. [Lose sound]---------------------------
+
+    [SerializeField]
+    private AudioClip m_LoseSound;
+    [SerializeField]
+    private AudioClip m_WinSound;
+    [SerializeField]
+    private AudioSource m_AudioSource;
+
+    //used to call the scence for each level (1 or 2) (K.R.)
+    [SerializeField]
+    private string m_LevelSceneName;
+    [SerializeField]
+    private string m_Level2SceneName;
+
+
+    //--Keegan R.----------------------------------------^
 
     [SerializeField]
     private List<string> m_levels = new List<string>();
@@ -15,12 +32,19 @@ public class GameStateManager : MonoBehaviour
 
     private static GameStateManager _instance;
 
+    //K.R for InGameUI
+    public static InGameUI.GameOverDelegate OnGameOver;
+    public static InGameUI.LevelCompleteDelegate OnLevelComplete;
+    public static InGameUI.YouWinDelegate OnYouWin;
+
 
     enum GAMESTATE
     {
         MENU,
         PLAYING,
         PAUSED,
+        WIN,
+        LOSE,
         GAMEOVER
     }
     private static GAMESTATE m_state;
@@ -76,5 +100,88 @@ public class GameStateManager : MonoBehaviour
         }
     }
 
+    //Keegan R. GameOver/Sound----------------
+
+    // when time runs out or goal is achieved this is called and gamestate is changed to activate (K.R.)
+    // the right gameover (K.R.)
+
+    public static void GameOver()
+    {
+        //checks if checks gamestate (win or lose) prompts players with sound/Message/buttons (K.R.)
+
+        if (m_state == GAMESTATE.LOSE)
+        {
+            //will play sound and activate ui to show before change of scnene (K.R.)
+            _instance.m_AudioSource.PlayOneShot(_instance.m_LoseSound);
+            _instance.StartCoroutine(_instance.GameOverRoutine());
+
+        }
+        else if (m_state == GAMESTATE.WIN)
+        {
+            //will play sound and activate ui to show before change of scnene (K.R.)
+            _instance.m_AudioSource.PlayOneShot(_instance.m_WinSound);
+            _instance.StartCoroutine(_instance.LevelCompleteRoutine());
+
+
+        }
+
+    }
+
+    //used by button to go to the next scene once level is completed/won (K.R.)
+    public static void NextLevel()
+    {
+        //will be called before changed to the main menu or nextlevel (K.R.)
+        //checks whether you are in level one or two to know whats the next scence also gamestate (K.R.)
+        if (m_state == GAMESTATE.WIN)
+        {
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName(_instance.m_LevelSceneName))
+            {
+                Debug.Log("NextLevel");
+                SceneManager.LoadScene(_instance.m_Level2SceneName);
+
+            }
+            else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName(_instance.m_Level2SceneName))
+            {
+                GameStateManager.Title();
+            }
+        }
+        else if (m_state == GAMESTATE.LOSE)
+        {
+            GameStateManager.Title();
+        }
+
+    }
+
+    //checks if level wass complete or failed and calls gameover sets gamestate (lose or win)
+    public static void WinOrLose(int number)
+    {
+        if (number == 1)
+        {
+            m_state = GAMESTATE.LOSE;
+            GameStateManager.GameOver();
+
+        }
+        else if (number == 0)
+        {
+            m_state = GAMESTATE.WIN;
+            GameStateManager.GameOver();
+        }
+
+    }
+    //Keegan R. ------------------------------
+
+    private IEnumerator GameOverRoutine()
+    {
+        yield return OnGameOver();
+    }
+    private IEnumerator LevelCompleteRoutine()
+    {
+        yield return OnLevelComplete();
+    }
+
+    private IEnumerator YouWinRoutine()
+    {
+        yield return OnYouWin();
+    }
 
 }

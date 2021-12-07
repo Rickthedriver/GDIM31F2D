@@ -5,6 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class Removal : MonoBehaviour
 {
+    //keegan r. Magic sound and audio source for pentagon fade
+    [SerializeField]
+    private AudioClip m_MagicSound;
+
+    [SerializeField]
+    private AudioSource m_AudioSource;
+    //keegan r.-----------------------------------------------
+
     // Start is called before the first frame update
     private float fadeSpeed;
     SpriteRenderer rend;
@@ -31,6 +39,10 @@ public class Removal : MonoBehaviour
 
     IEnumerator FadeOut()
     {
+        //keegan r. Magic sound play b4 fade
+        m_AudioSource.PlayOneShot(m_MagicSound);
+        //keegan r.-------------------------
+
         for (float f = 1f; f >=-0.05f; f -= 0.05f)
         {
             Color c = rend.material.color;
@@ -45,10 +57,28 @@ public class Removal : MonoBehaviour
 
 
 
-    void OnMouseDown()
+    //Keegan R. Collsion of Pentagram Light & Dark------------------------
+
+    /*if darkwizard collides with dark pentagram it disappears
+      if lightwiard collides with light pentagram it disappears
+      otherwise they cant pass through */
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        //StartCoroutine("FadeIn");
-        StartCoroutine("FadeOut");
-        
+        if (collision.gameObject.tag == "DarkWizard")
+        {
+            if (gameObject.tag == "Dark")
+            {
+                StartCoroutine("FadeOut");
+            }
+
+        }
+        if (collision.gameObject.tag == "LightWizard")
+        {
+            if (gameObject.tag == "Light")
+            {
+                StartCoroutine("FadeOut");
+            }
+        }
     }
+    //Keegan R. ------------------------------------------------------------
 }
