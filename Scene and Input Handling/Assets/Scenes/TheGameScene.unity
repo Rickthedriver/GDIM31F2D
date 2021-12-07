@@ -522,6 +522,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eac4d682f06395a41bafded36c3e4ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frameArray:
+  - {fileID: 21300000, guid: c98b9cd543d1a6d448e27babb81798a0, type: 3}
+  - {fileID: 21300002, guid: c98b9cd543d1a6d448e27babb81798a0, type: 3}
+  - {fileID: 21300004, guid: c98b9cd543d1a6d448e27babb81798a0, type: 3}
+  - {fileID: 21300006, guid: c98b9cd543d1a6d448e27babb81798a0, type: 3}
 --- !u!20 &409840213
 Camera:
   m_ObjectHideFlags: 0
@@ -578,18 +583,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.002064377, y: -0.02437973}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
+    oldSize: {x: 1.7, y: 3.3}
     newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4156265, y: 1.4463549}
+  m_Size: {x: 0.8931052, y: 2.5062714}
   m_EdgeRadius: 0
 --- !u!1839735485 &409840215
 Tilemap:
@@ -669,7 +674,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 31b17986fa5b13f4f9b7403589287a19, type: 3}
+  m_Sprite: {fileID: 21300002, guid: c98b9cd543d1a6d448e27babb81798a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -688,8 +693,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 409840211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.28, y: -5.82, z: -1.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 12.27, y: -5.86, z: -1.1}
+  m_LocalScale: {x: 0.7809, y: 0.5937, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -3664,7 +3669,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 474145266}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f888753184d84944945e748fd4f6c55, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &519420028
@@ -3784,18 +3789,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.016212627, y: -0.07149148}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 1.6}
+    oldSize: {x: 1.7, y: 3.3}
     newSize: {x: 1.6, y: 1.6}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4156265, y: 1.4463549}
+  m_Size: {x: 0.9433459, y: 2.456829}
   m_EdgeRadius: 0
 --- !u!50 &637630500
 Rigidbody2D:
@@ -3858,7 +3863,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4836c09be31426e49b52ea966be0a3c8, type: 3}
+  m_Sprite: {fileID: -8921538838836776053, guid: 9c3ba15823d35f047abd59513b2df8f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3877,8 +3882,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637630498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.35, y: 1.49, z: -2.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.04, y: 1.61, z: -2.11}
+  m_LocalScale: {x: 0.76395404, y: 0.59387875, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -3933,6 +3938,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7e8001a0e1cee04489279ab45f989f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  frameArray:
+  - {fileID: -8150820234765050457, guid: 9c3ba15823d35f047abd59513b2df8f4, type: 3}
+  - {fileID: -8921538838836776053, guid: 9c3ba15823d35f047abd59513b2df8f4, type: 3}
+  - {fileID: 7354235919226545511, guid: 9c3ba15823d35f047abd59513b2df8f4, type: 3}
+  - {fileID: 8862537527771243200, guid: 9c3ba15823d35f047abd59513b2df8f4, type: 3}
 --- !u!1 &661173278
 GameObject:
   m_ObjectHideFlags: 0
@@ -4243,7 +4253,7 @@ GameObject:
   - component: {fileID: 839595877}
   - component: {fileID: 839595878}
   m_Layer: 0
-  m_Name: reset
+  m_Name: play
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4258,7 +4268,7 @@ RectTransform:
   m_GameObject: {fileID: 839595876}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1455300670}
   - {fileID: 1368804789}
@@ -4267,7 +4277,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 124, y: -245}
+  m_AnchoredPosition: {x: 133.2, y: -369.3}
   m_SizeDelta: {x: 277.52, y: 57.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839595878
@@ -4641,7 +4651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000017166, y: 0.00000047684}
+  m_AnchoredPosition: {x: 6.3, y: 0.00000047684}
   m_SizeDelta: {x: 138.22, y: 57.82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1368804790
@@ -4796,7 +4806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 149, y: 73}
+  m_AnchoredPosition: {x: 263, y: 150}
   m_SizeDelta: {x: 541.72, y: 269.03}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1514131747
@@ -5147,7 +5157,7 @@ RectTransform:
   m_GameObject: {fileID: 1936952202}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.99990976, y: 0.99990976, z: 0.99990976}
   m_Children:
   - {fileID: 1919568451}
   - {fileID: 111216599}
@@ -5156,7 +5166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 133.2, y: 110.9}
+  m_AnchoredPosition: {x: 133.2, y: 110}
   m_SizeDelta: {x: 277.52, y: 62.633}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1936952204
