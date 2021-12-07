@@ -12,23 +12,27 @@ public class TriggerWin : MonoBehaviour
     [SerializeField]
     private string m_PlayerTwoTag;
     [SerializeField]
+    private string m_GoalTag;
+    [SerializeField]
     private static int m_ZeroOrOne = 0;
 
     // used to ensure both players made it to save princess to go to next level or win the entire game (K.R.)
     private bool m_PlayerOneTrigger;
     private bool m_PlayerTwoTrigger;
+    private bool m_GoalTagTrigger;
 
 
     void Start()
     {
         m_PlayerOneTrigger = false;
         m_PlayerTwoTrigger = false;
+        m_GoalTagTrigger = false;
     }
 
     // Update is called once per frame and checks if both variables are true to initiate the princess sae to win (K.R.)
     void Update()
     {
-        if(m_PlayerOneTrigger == true && m_PlayerTwoTrigger == true)
+        if(m_PlayerOneTrigger == true && m_PlayerTwoTrigger == true && m_GoalTagTrigger == true)
         {
             Debug.Log("Saved pt1");
             PrincessSaved();
@@ -51,6 +55,13 @@ public class TriggerWin : MonoBehaviour
         {
             Debug.Log("player two");
             m_PlayerTwoTrigger = true;
+
+        }
+
+        if (collision.tag == m_GoalTag)
+        {
+            Debug.Log("goal two");
+            m_GoalTagTrigger = true;
 
         }
     }
