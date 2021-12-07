@@ -28,24 +28,24 @@ public class LightMovement : MonoBehaviour
         float moveX = 0f;
         float moveY = 0f;
 
-        if (Input.GetKey(KeyCode.T))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             moveY = +1f;
             gameObject.GetComponent<SpriteRenderer>().sprite = frameArray[0];
         }
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
 
             moveX = -1f;
             gameObject.GetComponent<SpriteRenderer>().sprite = frameArray[3];
         }
-        if (Input.GetKey(KeyCode.G))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
             moveY = -1f;
             gameObject.GetComponent<SpriteRenderer>().sprite = frameArray[1];
 
         }
-        if (Input.GetKey(KeyCode.H))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             moveX = +1f;
             gameObject.GetComponent<SpriteRenderer>().sprite = frameArray[2];
