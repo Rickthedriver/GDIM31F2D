@@ -20,6 +20,8 @@ public class GameStateManager : MonoBehaviour
     private string m_LevelSceneName;
     [SerializeField]
     private string m_Level2SceneName;
+    [SerializeField]
+    private string m_ActiveScene = null;
 
 
     //--Keegan R.----------------------------------------^
@@ -44,6 +46,7 @@ public class GameStateManager : MonoBehaviour
         PLAYING,
         PAUSED,
         WIN,
+        WIN2,
         LOSE,
         GAMEOVER
     }
@@ -123,7 +126,12 @@ public class GameStateManager : MonoBehaviour
             _instance.StartCoroutine(_instance.LevelCompleteRoutine());
 
 
+        }else if (m_state == GAMESTATE.WIN2)
+        {
+            _instance.m_AudioSource.PlayOneShot(_instance.m_WinSound);
+            _instance.StartCoroutine(_instance.YouWinRoutine());
         }
+
 
     }
 
@@ -134,19 +142,14 @@ public class GameStateManager : MonoBehaviour
         //checks whether you are in level one or two to know whats the next scence also gamestate (K.R.)
         if (m_state == GAMESTATE.WIN)
         {
-            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName(_instance.m_LevelSceneName))
-            {
-                Debug.Log("NextLevel");
-                SceneManager.LoadScene(_instance.m_Level2SceneName);
-
-            }
-            else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName(_instance.m_Level2SceneName))
-            {
-                GameStateManager.Title();
-            }
+            SceneManager.LoadScene(_instance.m_Level2SceneName);
         }
         else if (m_state == GAMESTATE.LOSE)
         {
+            GameStateManager.Title();
+        }else if(m_state == GAMESTATE.WIN2)
+        {
+            //after level 2 is completed
             GameStateManager.Title();
         }
 
@@ -164,6 +167,11 @@ public class GameStateManager : MonoBehaviour
         else if (number == 0)
         {
             m_state = GAMESTATE.WIN;
+            GameStateManager.GameOver();
+        }
+        else if (number == 2)
+        {
+            m_state = GAMESTATE.WIN2;
             GameStateManager.GameOver();
         }
 

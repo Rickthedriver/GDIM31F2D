@@ -60,8 +60,16 @@ public class InGameUI : MonoBehaviour
     //button to call nextlevel after completing level (K.R.)
     public void OnClickNext()
     {
-        Debug.Log("pressed");
+        Debug.Log("pressed next btn");
         GameStateManager.NextLevel();
     }
-   
+
+    //button to call next after gameover (K.R.)
+    public void OnClickYouWin()
+    {
+        Debug.Log("pressed you win btn");
+        GameStateManager.NextLevel();
+    }
+    //(K.R.)----------------
+
 }

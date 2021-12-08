@@ -13,8 +13,9 @@ public class TriggerWin : MonoBehaviour
     private string m_PlayerTwoTag;
     [SerializeField]
     private string m_GoalTag;
+    //used to determine wether its win(0), lost(1) or final win(2) (0, 1, 2)
     [SerializeField]
-    private static int m_ZeroOrOne = 0;
+    private static int m_Number = 0;
 
     // used to ensure both players made it to save princess to go to next level or win the entire game (K.R.)
     private bool m_PlayerOneTrigger;
@@ -71,7 +72,7 @@ public class TriggerWin : MonoBehaviour
     {
         Debug.Log("Saved pt2");
         //winorlose will check if there is another level or gameover (win) (K.R.)
-        GameStateManager.WinOrLose(m_ZeroOrOne); 
+        GameStateManager.WinOrLose(m_Number); 
        
     }
 
