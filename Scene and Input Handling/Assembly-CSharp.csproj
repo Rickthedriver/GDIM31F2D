@@ -56,13 +56,14 @@
     <Compile Include="Assets\Script\InGameUI.cs" />
     <Compile Include="Assets\Script\Removal.cs" />
     <Compile Include="Assets\Script\GamePlay.cs" />
+    <Compile Include="Assets\Script\PauseMenu.cs" />
     <Compile Include="Assets\Script\GameStateManager.cs" />
     <Compile Include="Assets\Script\TriggerWin.cs" />
     <Compile Include="Assets\Script\CameraFollow.cs" />
     <Compile Include="Assets\Script\TitleMenu.cs" />
     <Compile Include="Assets\Script\LightMovement.cs" />
     <Compile Include="Assets\Script\Movement.cs" />
-    <Compile Include="Assets\Script\PauseMenu.cs" />
+    <Compile Include="Assets\Script\CountdownTimer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
