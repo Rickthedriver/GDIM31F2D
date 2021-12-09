@@ -3027,17 +3027,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &877717633 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 825687879350549452, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
-  m_PrefabInstance: {fileID: 1182410299}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b7f22fa1f655f4ea94368feb13ebae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &883278274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3224,34 +3213,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 825687877707509357, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 825687877707509357, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 378
-      objectReference: {fileID: 0}
-    - target: {fileID: 825687877707509357, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -218
-      objectReference: {fileID: 0}
-    - target: {fileID: 825687877707509358, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
-      propertyPath: m_Interactable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 825687877707509358, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 877717633}
-    - target: {fileID: 825687877707509358, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Reset
-      objectReference: {fileID: 0}
-    - target: {fileID: 825687877707509358, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GamePlay, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 825687877737387718, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
       propertyPath: m_Name
       value: Camera
@@ -3303,22 +3264,6 @@ PrefabInstance:
     - target: {fileID: 825687877737387738, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 825687879350549452, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
-      propertyPath: SceneName
-      value: Level2
-      objectReference: {fileID: 0}
-    - target: {fileID: 825687879350549453, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
-      propertyPath: startingTime
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 825687879453689898, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 29
-      objectReference: {fileID: 0}
-    - target: {fileID: 825687879453689898, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}

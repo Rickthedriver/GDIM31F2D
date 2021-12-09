@@ -785,11 +785,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 825687877707509357, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 401
+      value: 73
       objectReference: {fileID: 0}
     - target: {fileID: 825687877707509357, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -212
+      value: -41
       objectReference: {fileID: 0}
     - target: {fileID: 825687877707509358, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -861,7 +861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 825687878362417311, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 403
+      value: 79
+      objectReference: {fileID: 0}
+    - target: {fileID: 825687878362417311, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 825687879350549452, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
       propertyPath: SceneName
