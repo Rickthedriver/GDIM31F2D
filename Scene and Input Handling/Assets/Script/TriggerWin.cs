@@ -28,6 +28,11 @@ public class TriggerWin : MonoBehaviour
         m_PlayerOneTrigger = false;
         m_PlayerTwoTrigger = false;
         m_GoalTagTrigger = false;
+
+        if(this.tag == "Level2")
+        {
+            m_Number = 2;
+        }
     }
 
     // Update is called once per frame and checks if both variables are true to initiate the princess sae to win (K.R.)

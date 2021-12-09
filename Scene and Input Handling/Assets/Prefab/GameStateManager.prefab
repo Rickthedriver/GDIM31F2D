@@ -48,7 +48,7 @@ MonoBehaviour:
   m_WinSound: {fileID: 8300000, guid: 209ca4a0221dd8d4ebf4a6d160ea91a8, type: 3}
   m_AudioSource: {fileID: 3592187707400352850}
   m_LevelSceneName: TheGameScene
-  m_Level2SceneName: 
+  m_Level2SceneName: Level 2
   m_levels:
   - TheGameScene
   m_TitleSceneName: MainMenu
