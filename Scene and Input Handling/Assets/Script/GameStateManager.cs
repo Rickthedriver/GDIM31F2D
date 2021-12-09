@@ -37,6 +37,9 @@ public class GameStateManager : MonoBehaviour
     public static InGameUI.LevelCompleteDelegate OnLevelComplete;
     public static InGameUI.YouWinDelegate OnYouWin;
 
+    //Cameron Romeis
+
+    [SerializeField] private GameObject pauseMenuUI;
 
     enum GAMESTATE
     {
@@ -96,12 +99,13 @@ public class GameStateManager : MonoBehaviour
         if(m_state == GAMESTATE.PLAYING)
         {
             m_state = GAMESTATE.PAUSED;
-            Time.timeScale = 0;
+            Time.timeScale = 0f;
+            
         }
         else if(m_state == GAMESTATE.PAUSED)
         {
             m_state = GAMESTATE.PLAYING;
-            Time.timeScale = 1; 
+            Time.timeScale = 1f;
         }
 
 

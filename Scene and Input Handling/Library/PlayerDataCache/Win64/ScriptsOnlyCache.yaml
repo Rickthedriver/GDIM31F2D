@@ -2,12 +2,16 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraFollow
+    - CountdownTimer
     - GamePlay
     - GameStateManager
+    - InGameUI
     - LightMovement
     - Movement
+    - PauseMenu
     - Removal
     - TitleMenu
+    - TriggerWin
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -16,8 +20,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -52,6 +54,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -59,23 +65,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1510}
     - Class: 114
-      Script: {instanceID: 2200}
+      Script: {instanceID: 2204}
     - Class: 114
-      Script: {instanceID: 2586}
+      Script: {instanceID: 2592}
     - Class: 114
-      Script: {instanceID: 2618}
+      Script: {instanceID: 2624}
     - Class: 114
-      Script: {instanceID: 2778}
+      Script: {instanceID: 2784}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 3002}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 3236}
     - Class: 114
-      Script: {instanceID: 3240}
+      Script: {instanceID: 3248}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 3360}
     - Class: 114
-      Script: {instanceID: 3978}
+      Script: {instanceID: 3986}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -93,6 +99,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     - Class: 19719996
       Script: {instanceID: 0}
@@ -121,6 +133,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -128,33 +144,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1510}
     - Class: 114
-      Script: {instanceID: 2088}
+      Script: {instanceID: 1596}
     - Class: 114
-      Script: {instanceID: 2200}
+      Script: {instanceID: 1942}
     - Class: 114
-      Script: {instanceID: 2480}
+      Script: {instanceID: 2092}
     - Class: 114
-      Script: {instanceID: 2586}
+      Script: {instanceID: 2204}
     - Class: 114
-      Script: {instanceID: 2618}
+      Script: {instanceID: 2484}
     - Class: 114
-      Script: {instanceID: 2778}
+      Script: {instanceID: 2530}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 2592}
     - Class: 114
-      Script: {instanceID: 3228}
+      Script: {instanceID: 2624}
     - Class: 114
-      Script: {instanceID: 3240}
+      Script: {instanceID: 2784}
     - Class: 114
-      Script: {instanceID: 3352}
+      Script: {instanceID: 2900}
     - Class: 114
-      Script: {instanceID: 3978}
+      Script: {instanceID: 3002}
     - Class: 114
-      Script: {instanceID: 4632}
+      Script: {instanceID: 3236}
     - Class: 114
-      Script: {instanceID: 5356}
+      Script: {instanceID: 3248}
     - Class: 114
-      Script: {instanceID: 5380}
+      Script: {instanceID: 3360}
+    - Class: 114
+      Script: {instanceID: 3986}
+    - Class: 114
+      Script: {instanceID: 4640}
+    - Class: 114
+      Script: {instanceID: 5386}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -172,6 +194,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     - Class: 19719996
       Script: {instanceID: 0}
@@ -206,6 +234,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkin
+  - hash:
+      serializedVersion: 2
+      Hash: 1ccb88b2098b8fd93bce53aa83685d6b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CountdownTimer
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -268,7 +302,13 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 41ddf90552732d0b8fc6851f14a54fd8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InGameUI
+  - hash:
+      serializedVersion: 2
+      Hash: 2bcc8287d5abfc3e91b531da78739bed
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Removal
@@ -316,13 +356,19 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 2e8591ed05ccd0a04f3538adf80f0857
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GamePlay
   - hash:
       serializedVersion: 2
-      Hash: 51672149a736f693c64484e6a8fb2435
+      Hash: c8c5e65e9fb858572516474d6e2102bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PauseMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 3b712897192a21bc4b70e6933ae5fb41
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameStateManager
@@ -368,6 +414,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 36bfbb0b46feb1e051661ea9a215ab21
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TriggerWin
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -646,7 +698,7 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 1f29d088e84d587a4a6d4967910b3332
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LightMovement
@@ -706,7 +758,7 @@ ScriptsOnlyBuild:
     className: BufferManager
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 1f29d088e84d587a4a6d4967910b3332
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -744,4 +796,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/TheGameScene.unity
-  playerPath: E:/AUCI/GDIM31/Animation/Scene and Input Handling.exe
+  playerPath: C:/Users/camer/Unity/Scene and Input Handling.exe
