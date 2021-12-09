@@ -6,7 +6,8 @@ public class LightMovement : MonoBehaviour
 {
     private Rigidbody2D rigidbody2D;
     private Vector3 moveDir;
-    const float SPEED = 20f;
+    
+    const float SPEED = 15f;
 
     [SerializeField] private Sprite[] frameArray;
 
@@ -25,8 +26,11 @@ public class LightMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         float moveX = 0f;
         float moveY = 0f;
+
+        //Cameron Romeis
 
         if (Input.GetKey(KeyCode.UpArrow))
         {

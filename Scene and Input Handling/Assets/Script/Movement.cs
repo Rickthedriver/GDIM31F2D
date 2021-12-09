@@ -6,7 +6,8 @@ public class Movement : MonoBehaviour
 {
     private Rigidbody2D rigidbody2D;
     private Vector3 moveDir;
-    const float SPEED = 20f;
+
+    const float SPEED = 15f;
 
     [SerializeField] private Sprite[] frameArray;
     
