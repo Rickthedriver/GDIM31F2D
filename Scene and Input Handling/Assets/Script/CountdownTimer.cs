@@ -12,6 +12,11 @@ public class CountdownTimer : MonoBehaviour
 
     [SerializeField] private Text countdownText;
 
+    //Keegan Rodriguez-----
+    [SerializeField]
+    private int m_number = 1;
+    //k.r------------------
+
     void Start()
     {
         currentTime = startingTime;
@@ -24,7 +29,7 @@ public class CountdownTimer : MonoBehaviour
 
         if(currentTime <= 0)
         {
-            GameStateManager.NewGame();
+            GameStateManager.WinOrLose(m_number);
         }
     }
 }

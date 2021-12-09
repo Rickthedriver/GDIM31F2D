@@ -20,8 +20,6 @@ public class GameStateManager : MonoBehaviour
     private string m_LevelSceneName;
     [SerializeField]
     private string m_Level2SceneName;
-    [SerializeField]
-    private string m_ActiveScene = null;
 
 
     //--Keegan R.----------------------------------------^
@@ -63,6 +61,19 @@ public class GameStateManager : MonoBehaviour
     }
     */
 
+    private void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(_instance);
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
     public static void NewGame()
     {
         //m_state = GAMESTATE.PLAYING;
@@ -70,7 +81,7 @@ public class GameStateManager : MonoBehaviour
         //{
         //SceneManager.LoadScene(1);
         //SceneManager.LoadScene(_instance.m_levels[0]);
-        SceneManager.LoadScene("TheGameScene");
+        SceneManager.LoadScene(_instance.m_LevelSceneName);
        // }
     }
 
