@@ -11,7 +11,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject pauseMenuUI;
 
 
-    // Update is called once per frame
+    // Code for pause because it pauseMenuUI was not working in GameStateManager
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
