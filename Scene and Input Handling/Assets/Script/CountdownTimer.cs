@@ -24,12 +24,16 @@ public class CountdownTimer : MonoBehaviour
 
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0");
+        
 
         if(currentTime <= 0)
         {
             GameStateManager.WinOrLose(m_number);
+        }
+        else
+        {
+            currentTime -= 1 * Time.deltaTime;
+            countdownText.text = currentTime.ToString("0");
         }
     }
 }
