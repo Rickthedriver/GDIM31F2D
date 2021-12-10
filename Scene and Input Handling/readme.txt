@@ -9,6 +9,7 @@ If the princess gets stuck on the wall and you cannot move her out, then there i
 
 Code is commented with which group member did what.
 Level 1 and starting code was made by Ruiheng Yuan.
+All sprite, room visual, grid material are gathered or hand drawed by Ruiheng Yuan.
 Level 2, menus, and unity work done by Cameron Romeis.
 UI, audio, mechanics for pentagrams and lots of code done by Keegan Najera
 
