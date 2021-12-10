@@ -33,6 +33,10 @@ public class TriggerWin : MonoBehaviour
         {
             m_Number = 2;
         }
+        if (this.tag == "Level1")
+        {
+            m_Number = 0;
+        }
     }
 
     // Update is called once per frame and checks if both variables are true to initiate the princess sae to win (K.R.)

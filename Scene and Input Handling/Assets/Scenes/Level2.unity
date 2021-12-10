@@ -3325,6 +3325,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_FontSize
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 825687879722017254, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc567e711ead2fc46a336fb45bd54197, type: 3}
 --- !u!1001 &1238285936
@@ -3442,6 +3446,10 @@ PrefabInstance:
     - target: {fileID: 2449553409873182856, guid: 0c9b905c8a9e3be419725b247093c24f, type: 3}
       propertyPath: m_Name
       value: WinPentagon
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449553409873182856, guid: 0c9b905c8a9e3be419725b247093c24f, type: 3}
+      propertyPath: m_TagString
+      value: Level2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c9b905c8a9e3be419725b247093c24f, type: 3}
