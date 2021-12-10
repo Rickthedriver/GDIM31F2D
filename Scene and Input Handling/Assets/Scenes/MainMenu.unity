@@ -3712,10 +3712,10 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Undecided
+  m_Text: Dark Dungeon
 --- !u!222 &636956622
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3741,7 +3741,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2373914153483703930, guid: 7f6857c64efadac4a995e1e9f95f4165, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.98
+      value: -5.99
       objectReference: {fileID: 0}
     - target: {fileID: 2373914153483703930, guid: 7f6857c64efadac4a995e1e9f95f4165, type: 3}
       propertyPath: m_LocalPosition.z
